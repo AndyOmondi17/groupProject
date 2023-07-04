@@ -3,110 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financing</title>
+    <title>Booking</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="Css/styles.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">AfriVolts</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutUs.html">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="ourCarsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Our Cars
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="ourCarsDropdown">
-                        <a class="dropdown-item" href="carDetails.html">Car Details</a>
-                        <a class="dropdown-item" href="bookTestDrive.html">Book a Test Drive</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Services
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <a class="dropdown-item" href="financing.html">Financing</a>
-                        <a class="dropdown-item" href="serviceCentres.html">Service Centers</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Blog
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="blogDropdown">
-                        <a class="dropdown-item" href="viewBlog.php">View Blog</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="careers.html">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contactUs.html">Contact Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Account
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="accountDropdown">
-                        <a class="dropdown-item" href="signIn.html">Sign In</a>
-                        <a class="dropdown-item" href="signUp.html">Sign Up</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container">
-        <h2 class="text-center mt-5">Financing Application</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-6"> 
-                <form>
-                    <div class="form-group">
-                        <label for="fullname">Full Name:</label>
-                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="First Name Last Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number:</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="model">Vehicle Model:</label>
-                        <select class="form-control" id="model" name="model" required>
-                            <option value="">--Please choose an option--</option>
-                            <option value="Model1">Model 1</option>
-                            <option value="Model2">Model 2</option>
-                            <option value="Model3">Model 3</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="income">Annual Income:</label>
-                        <input type="number" class="form-control" id="income" name="income" required>
-                    </div>
-                    <center>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Submit Application</button>
-                        </div>
-                    </center>
-                </form>
+<?php include "nav.php"; ?>
+    <div class="container mt-4">
+        <h2 class="text-center">Book a Test Drive</h2>
+        <p class="text-center">Fill in your details below to book a test drive. We will contact you shortly to confirm your appointment.</p>
+        
+        <form>
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Enter Full Name">
             </div>
-        </div>
+            <div class="form-group">
+                <label for="emailAddress">Email Address</label>
+                <input type="email" class="form-control" id="emailAddress" placeholder="Enter Email">
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" class="form-control" id="phoneNumber" placeholder="Enter Phone Number">
+            </div>
+            <div class="form-group">
+                <label for="preferredDate">Preferred Date</label>
+                <input type="date" class="form-control" id="preferredDate">
+            </div>
+            <div class="form-group">
+                <label for="preferredTime">Preferred Time</label>
+                <input type="time" class="form-control" id="preferredTime">
+            </div>
+            <div class="form-group">
+                <label for="selectVehicle">Select Vehicle</label>
+                <select class="form-control" id="selectVehicle">
+                    <option>Vehicle 1</option>
+                    <option>Vehicle 2</option>
+                    <option>Vehicle 3</option>
+                    <!-- Add more options as per your vehicle models -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <h5 class="mt-5">What to expect from the test drive</h5>
+        <p>Information about the test drive process, how long it usually takes, what features of the car the visitor will be able to test, etc.</p>
     </div>
-    <br><br><br><br>
 
 <footer class="footer mt-auto py-3 bg-light">
     <div class="container">
@@ -137,6 +80,7 @@
         </div>
     </div>
 </footer>
+
 <!-- Modal -->
 <div class="modal fade" id="termsAndConditionsModal" tabindex="-1" role="dialog" aria-labelledby="termsAndConditionsModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
@@ -179,8 +123,8 @@
     </div>
   </div>
 
- <!-- Modal -->
- <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+  <!-- Modal -->
+  <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
@@ -231,7 +175,7 @@
       </div>
     </div>
   </div>
-
+  
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

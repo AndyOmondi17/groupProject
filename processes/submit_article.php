@@ -10,7 +10,8 @@
 
         // Check if any field is empty
         if(empty($authorFullName) || empty($title) || empty($fullText) || empty($publicationDate)){
-            die("Error: All fields are required.");
+            header("Location: ../viewBlog.php?error=allfieldsrequired");
+            exit();
         } 
 
         // Sanitize the form data
@@ -21,14 +22,20 @@
 
         $insert_article = "INSERT INTO articles (authorFullName, title, `fullText`, publicationDate) VALUES ('$authorFullName', '$title', '$fullText', '$publicationDate')";
 
-
-        if ($conn->query($insert_article) === TRUE) {
-            echo "New article submitted successfully";
-            // You may want to redirect to another page, e.g., the list of all articles
-            // header("Location: ../view_articles.php");
-            // exit();
-        } else {
-            echo "Error: " . $insert_article . "<br>" . $conn->error;
+        try {
+            if ($conn->query($insert_article) === TRUE) {
+            
+                // You may want to redirect to another page, e.g., the list of all articles
+                header("Location: ../viewBlog.php?success=true");
+                exit();
+            } else {
+                header("Location: ../viewBlog.php?error=errorocurred");
+                exit();
+            }
+        } catch (Exception $e) {
+            header("Location: ../viewBlog.php?error=".$e->getMessage());
+            exit();
         }
+         
     }
 ?>

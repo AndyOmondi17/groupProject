@@ -1,135 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="Css/styles.css">
 </head>
 <body>
+<?php include "nav.php"; ?>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">AfriVolts</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutUs.html">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="ourCarsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Our Cars
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="ourCarsDropdown">
-                        <a class="dropdown-item" href="carDetails.html">Car Details</a>
-                        <a class="dropdown-item" href="bookTestDrive.html">Book a Test Drive</a>
+    <div class="container mt-5">
+        <h2 class="text-center">Sign Up</h2>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+            <?php if (isset($_GET["error"])) {
+            $error = $_GET["error"];
+            echo "<div class='alert alert-danger' role='alert'>";
+            if ($error === "invalidemail") {
+                echo "Invalid email format!";
+            } else if ($error === "allfieldsrequired") {
+                echo "All fields are required.";
+            }
+             else if (str_contains($error, "username")) {
+                echo "Username already exists!";
+            } else if ($error === "passwordmatch") {
+                echo "Passwords do not match!";
+            } else if (str_contains($error, "email")) {
+                echo "Email already exists!";
+            }
+            echo " Please try again.";
+          echo "</div>";
+        } ?>
+                <form method="POST" action="processes/signup_process.php">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" name="fullName" id="fullName" placeholder="Enter your full name" required>
                     </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Services
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <a class="dropdown-item" href="financing.html">Financing</a>
-                        <a class="dropdown-item" href="serviceCentres.html">Service Centers</a>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="username" class="form-control" name="username" id="userName" placeholder="Username" required>
                     </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Blog
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="blogDropdown">
-                        <a class="dropdown-item" href="viewBlog.php">View Blog</a>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="careers.html">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contactUs.html">Contact Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Account
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="accountDropdown">
-                        <a class="dropdown-item" href="signIn.html">Sign In</a>
-                        <a class="dropdown-item" href="signUp.html">Sign Up</a>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" required minlength="8">
                     </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center my-4">
-                <h2>Join Our Team</h2>
-                <p>At AfriVolts, we're working towards a greener, more sustainable future with our innovative electric vehicles. As pioneers in the electric vehicle market in Africa, we're always on the lookout for passionate, talented individuals who are excited about making a difference in the world.</p>
-            </div>
-            <div class="col-lg-6">
-                <h4>Why AfriVolts?</h4>
-                <p>We're a company driven by our mission to transform transportation and shape the future of mobility. When you join our team, you'll be part of a fast-paced, dynamic environment where innovation is not just welcomed, but encouraged.</p>
-                <p>We believe that our people are our greatest asset, and we're committed to supporting the growth and development of every team member. At AfriVolts, you'll have the opportunity to work alongside some of the brightest minds in the industry, and your contributions will have a tangible impact on our company and the world.</p>
-            </div>
-            <div class="col-lg-6">
-                <h4>Benefits & Perks</h4>
-                <p>We offer a competitive benefits package to support the health and well-being of our employees. This includes comprehensive health insurance, generous paid time off, and a retirement savings plan. We also offer a range of perks to make life a little more enjoyable, including:</p>
-                <ul>
-                    <li>Flexible working hours</li>
-                    <li>Remote work opportunities</li>
-                    <li>Professional development and continued learning support</li>
-                    <li>An inclusive, diverse work environment</li>
-                </ul>
-            </div>
-            <div class="col-lg-12 text-center my-4">
-                <h4>Ready to Drive the Future?</h4>
-                <p>Check out our current openings and apply today. We can't wait to hear from you!</p>
-                <a href="careers.html" class="btn btn-primary">View Open Positions</a>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required minlength="8">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="terms" required>
+                        <label class="form-check-label" for="terms">I agree to the Terms and Conditions</label>
+                    </div>
+                    <center>
+                        <button type="submit"  class="btn btn-primary">Submit</button>
+                    </center>
+                </form>
+                <div class="mt-3">
+                    <center><p>Already have an account? <a href="signIn.html">Sign In</a></p></center>
+                    
+                </div>
             </div>
         </div>
     </div>
     
-        
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h5>AfriVolts</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" data-toggle="modal" data-target="#privacyPolicyModal">Privacy Policy</a></li>
 
-
-<footer class="footer mt-auto py-3 bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <h5>AfriVolts</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" data-toggle="modal" data-target="#privacyPolicyModal">Privacy Policy</a></li>
-
-                    <li><a href="#" data-toggle="modal" data-target="#termsAndConditionsModal">Terms & Conditions</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="col-4">
-                <h5>Contact Us</h5>
-                <ul class="list-unstyled">
-                    <li>Email: info@afirvolts.co.ke</li>
-                    <li>Phone: +254 700 000000</li>
-                </ul>
-            </div>
-            <div class="col-4">
-                <h5>Follow Us</h5>
-               <a href="#"><i class="fab fa-instagram"></i> Instagram</a><br>
-                <a href="#"><i class="fab fa-facebook"></i> Facebook</a><br>
-                <a href="#"><i class="fab fa-twitter"></i> Twitter</a><br>
-               <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <li><a href="#" data-toggle="modal" data-target="#termsAndConditionsModal">Terms & Conditions</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: info@afirvolts.co.ke</li>
+                        <li>Phone: +254 700 000000</li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <h5>Follow Us</h5>
+                   <a href="#"><i class="fab fa-instagram"></i> Instagram</a><br>
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a><br>
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a><br>
+                   <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
-
-<!-- Modal -->
+    </footer>
+    <!-- Modal -->
 <div class="modal fade" id="termsAndConditionsModal" tabindex="-1" role="dialog" aria-labelledby="termsAndConditionsModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
@@ -171,8 +141,8 @@
     </div>
   </div>
 
- <!-- Modal -->
- <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+  <!-- Modal -->
+  <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
@@ -223,14 +193,9 @@
       </div>
     </div>
   </div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
-</html>
-
-
-    </body>
 </html>

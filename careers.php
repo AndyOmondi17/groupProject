@@ -3,98 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Center</title>
+    <title>Careers</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="Css/styles.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">AfriVolts</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutUs.html">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="ourCarsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Our Cars
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="ourCarsDropdown">
-                        <a class="dropdown-item" href="carDetails.html">Car Details</a>
-                        <a class="dropdown-item" href="bookTestDrive.html">Book a Test Drive</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Services
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <a class="dropdown-item" href="financing.html">Financing</a>
-                        <a class="dropdown-item" href="serviceCentres.html">Service Centers</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Blog
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="blogDropdown">
-                        <a class="dropdown-item" href="viewBlog.php">View Blog</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="careers.html">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contactUs.html">Contact Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Account
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="accountDropdown">
-                        <a class="dropdown-item" href="signIn.html">Sign In</a>
-                        <a class="dropdown-item" href="signUp.html">Sign Up</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container mt-5">
-        <div class="text-center mb-4">
-            <h2>AfriVolts Service Centers</h2>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <p>At AfriVolts, we're committed to providing our customers with top-notch service. Our service centers are equipped with the latest technology and staffed by trained professionals, ready to take care of your electric vehicle's needs.</p>
-                
-                <h5 class="mt-4">Comprehensive Services</h5>
-                <p>From routine maintenance to complex repairs, our service centers offer a wide range of services to keep your vehicle running smoothly.</p>
-
-                <h5 class="mt-4">Expert Technicians</h5>
-                <p>Our technicians undergo rigorous training in electric vehicle technology to provide the highest level of care for your vehicle.</p>
-
-                <h5 class="mt-4">Convenient Locations</h5>
-                <p>With service centers located across the country, you're never far from quality AfriVolts service.</p>
-
-                <h5 class="mt-4">Easy Scheduling</h5>
-                <p>Booking a service appointment is easy with our online scheduling tool. Simply select your preferred service center, choose a convenient date and time, and we'll take care of the rest.</p>
-                
-                <div class="text-center mt-4">
-                    <a href="serviceBooking.html" class="btn btn-primary">Book a Service Appointment</a>
-                </div>
-            </div>
-        </div>
+<?php include "nav.php"; ?>
+    <div class="container">
+        <h4>Current Openings</h4>
+        <ul>
+            <li>
+                <h5>Electric Vehicle Engineer</h5>
+                <p>Join our engineering team to design and build innovative electric vehicles. Requires a degree in Electrical Engineering or a related field and 3+ years of experience.</p>
+                <center>
+                    <button class="btn btn-primary">Apply Now</button>
+                </center>
+            </li>
+            <li>
+                <h5>Marketing Specialist</h5>
+                <p>We're looking for a creative and driven individual to help shape our marketing strategy. Requires a degree in Marketing or a related field and 2+ years of experience.</p>
+                <center>
+                    <button class="btn btn-primary">Apply Now</button>
+                </center>
+            </li>
+            <li>
+                <h5>Customer Service Representative</h5>
+                <p>Join our customer service team to help customers get the most out of their AfriVolts experience. Requires excellent communication skills and a passion for problem-solving.</p>
+                <center>
+                    <button class="btn btn-primary">Apply Now</button>
+                </center>
+            </li>
+            <li>
+                <h5>Quality Assurance Engineer</h5>
+                <p>Help ensure our electric vehicles meet the highest standards of quality and safety. Requires a degree in Mechanical Engineering or a related field and experience in quality assurance.</p>
+                <center>
+                    <button class="btn btn-primary">Apply Now</button>
+                </center>
+            </li>
+            <li>
+                <h5>Supply Chain Manager</h5>
+                <p>Join our team to manage and optimize our supply chain operations. Requires a degree in Business, Logistics, or a related field and 5+ years of experience in supply chain management.</p>
+                <center>
+                    <button class="btn btn-primary">Apply Now</button>
+                </center>
+            </li>
+            <li>
+                <h5>Human Resources Manager</h5>
+                <p>Play a key role in supporting our team by managing hiring, onboarding, benefits, and more. Requires a degree in Human Resources or a related field and 5+ years of experience in HR.</p>
+                <center>
+                    <button class="btn btn-primary">Apply Now</button>
+                </center>
+            </li>
+            <li>
+                <h5>Sales Manager</h5>
+                <p>Lead our sales team to achieve ambitious targets and provide excellent service to our customers. Requires a degree in Business, Marketing, or a related field and 5+ years of experience in sales, including at least 2 years in a leadership role.</p>
+                <center>
+                    <button class="btn btn-primary">Apply Now</button>
+                </center>
+            </li>
+            
+        </ul>
     </div>
-    <br>
+    
 
 <footer class="footer mt-auto py-3 bg-light">
     <div class="container">
@@ -167,8 +138,8 @@
     </div>
   </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+ <!-- Modal -->
+ <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">

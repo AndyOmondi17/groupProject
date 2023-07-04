@@ -1,125 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Cars</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="Css/styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">AfriVolts</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutUs.html">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="ourCarsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Our Cars
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="ourCarsDropdown">
-                        <a class="dropdown-item" href="carDetails.html">Car Details</a>
-                        <a class="dropdown-item" href="bookTestDrive.html">Book a Test Drive</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Services
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <a class="dropdown-item" href="financing.html">Financing</a>
-                        <a class="dropdown-item" href="serviceCentres.html">Service Centers</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Blog
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="blogDropdown">
-                        <a class="dropdown-item" href="viewBlog.php">View Blog</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="careers.html">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contactUs.html">Contact Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Account
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="accountDropdown">
-                        <a class="dropdown-item" href="signIn.html">Sign In</a>
-                        <a class="dropdown-item" href="signUp.html">Sign Up</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <br><br><br><br>
+
+<?php include "nav.php"; ?>
     <div class="container mt-5">
-        <h2 class="text-center">Sign In</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-8"> <!-- Adjust column number as per your requirement -->
-                <form method="POST" action="processes/signin_process.php">
-    
-                    <div class="form-group">
-                        <label for="loginEmail">Email address</label>
-                        <input type="email" name="email" class="form-control" id="loginEmail" placeholder="Enter email">
+        <h2 class="text-center">Car Details</h2>
+        
+        <!-- Car Details -->
+        <div class="card mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-6">
+                    <img src="Images/hyundai-motor-group-a3vDd8hzuYs-unsplash.jpg" class="card-img" alt="Car Image">
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <h5 class="card-title">Falcon X</h5>
+                        <p class="card-text">Vehicle Type: Electric Sedan
+                            Range: 450 miles (724 km)
+                            Battery: 100 kWh Lithium-ion
+                            Performance: 0-60 mph in 2.8 seconds
+                            Top Speed: 155 mph (250 km/h)
+                            Seating: 5 adults
+                            Cargo Capacity: 28 cu ft
+                            Weight: 4,941 lbs (2,241 kg)
+                            Drive: All-Wheel Drive
+                            Wheel Size: 20" or 22"</p>
+                        <p class="card-text">Price: Ksh 1000,000</p>
                     </div>
-                    <div class="form-group">
-                        <label for="loginPassword">Password</label>
-                        <input type="password" name="password" class="form-control" id="loginPassword" placeholder="Password">
-                    </div>
-                    <input type="hidden" name="signin" value="1"> <!-- Add this line -->
-                    <center>
-                        <button type="submit" name="signin" class="btn btn-primary">Submit</button>
-                    </center>
-                </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison -->
+        <h4>Comparison</h4>
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Specification / Feature</th>
+                <th>AfriVolts Falcon X</th>
+                <th>AfriVolts Eagle Z</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Vehicle Type</td>
+                <td>Electric Sedan</td>
+                <td>Electric SUV</td>
+              </tr>
+              <tr>
+                <td>Range</td>
+                <td>450 miles (724 km)</td>
+                <td>350 miles (563 km)</td>
+              </tr>
+              <tr>
+                <td>Battery</td>
+                <td>100 kWh Lithium-ion</td>
+                <td>85 kWh Lithium-ion</td>
+              </tr>
+              <tr>
+                <td>Performance (0-60 mph)</td>
+                <td>2.8 seconds</td>
+                <td>4.2 seconds</td>
+              </tr>
+              <tr>
+                <td>Top Speed</td>
+                <td>155 mph (250 km/h)</td>
+                <td>135 mph (217 km/h)</td>
+              </tr>
+              <tr>
+                <td>Seating</td>
+                <td>5 adults</td>
+                <td>7 adults</td>
+              </tr>
+              <tr>
+                <td>Cargo Capacity</td>
+                <td>28 cu ft</td>
+                <td>88 cu ft</td>
+              </tr>
+              <tr>
+                <td>Weight</td>
+                <td>4,941 lbs (2,241 kg)</td>
+                <td>5,421 lbs (2,459 kg)</td>
+              </tr>
+              <tr>
+                <td>Drive</td>
+                <td>All-Wheel Drive</td>
+                <td>All-Wheel Drive</td>
+              </tr>
+              <tr>
+                <td>Wheel Size</td>
+                <td>20" or 22"</td>
+                <td>20" or 22"</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Feature Comparison:</h2>
+<p>Both the Falcon X and Eagle Z share most of their features including AutoPilot, over-the-air updates, All-Wheel Drive, luxurious interiors, high-strength architecture for safety, regenerative braking, and the fact they are zero emissions vehicles.</p>
+<p>The key difference in features comes with the space and functionality. The Eagle Z, being an SUV, offers significantly more cargo capacity and can seat two more adults than the Falcon X. It's designed for families who need more space for both passengers and cargo. However, it does have a slightly lower range and slower acceleration due to its increased size and weight.</p>
+<p>The Falcon X, on the other hand, is more performance oriented. It has superior acceleration and top speed, while still offering ample space for 5 adults. It's designed for those who desire performance without compromising on comfort and safety.</p>
+<p>Please note: Always verify the actual specifications and features with the vehicle manufacturer, as the above is purely fictitious and for illustrative purposes only.</p>
+
+          
+
+        <!-- Availability -->
+        <h4>Availability</h4>
+        <p>This vehicle is currently in stock.</p>
+        
+        <a href="contactUs.html" class="btn btn-primary">Contact Us for More Info</a>
+    </div>
+
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h5>AfriVolts</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" data-toggle="modal" data-target="#privacyPolicyModal">Privacy Policy</a></li>
+
+                    <li><a href="#" data-toggle="modal" data-target="#termsAndConditionsModal">Terms & Conditions</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li>Email: info@afirvolts.co.ke</li>
+                    <li>Phone: +254 700 000000</li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h5>Follow Us</h5>
+               <a href="#"><i class="fab fa-instagram"></i> Instagram</a><br>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a><br>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a><br>
+               <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
     </div>
-
-    <br><br><br><br><br><br>
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <h5>AfriVolts</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" data-toggle="modal" data-target="#privacyPolicyModal">Privacy Policy</a></li>
-
-                        <li><a href="#" data-toggle="modal" data-target="#termsAndConditionsModal">Terms & Conditions</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-4">
-                    <h5>Contact Us</h5>
-                    <ul class="list-unstyled">
-                        <li>Email: info@afirvolts.co.ke</li>
-                        <li>Phone: +254 700 000000</li>
-                    </ul>
-                </div>
-                <div class="col-4">
-                    <h5>Follow Us</h5>
-                   <a href="#"><i class="fab fa-instagram"></i> Instagram</a><br>
-                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a><br>
-                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a><br>
-                   <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Modal -->
+</footer>
+<!-- Modal -->
 <div class="modal fade" id="termsAndConditionsModal" tabindex="-1" role="dialog" aria-labelledby="termsAndConditionsModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
@@ -161,8 +187,8 @@
     </div>
   </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+ <!-- Modal -->
+ <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
@@ -213,10 +239,14 @@
       </div>
     </div>
   </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        
-    
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
+</html>
+
+
+    </body>
 </html>

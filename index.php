@@ -3,126 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers</title>
+    <title>Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="Css/styles.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">AfriVolts</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutUs.html">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="ourCarsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Our Cars
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="ourCarsDropdown">
-                        <a class="dropdown-item" href="carDetails.html">Car Details</a>
-                        <a class="dropdown-item" href="bookTestDrive.html">Book a Test Drive</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Services
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <a class="dropdown-item" href="financing.html">Financing</a>
-                        <a class="dropdown-item" href="serviceCentres.html">Service Centers</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Blog
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="blogDropdown">
-                        <a class="dropdown-item" href="viewBlog.php">View Blog</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="careers.html">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contactUs.html">Contact Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Account
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="accountDropdown">
-                        <a class="dropdown-item" href="signIn.html">Sign In</a>
-                        <a class="dropdown-item" href="signUp.html">Sign Up</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <?php include "nav.php";
+    $userSignedIn = isset($_SESSION["username"]);
+    ?>
 
-    <div class="container">
-        <h4>Current Openings</h4>
-        <ul>
-            <li>
-                <h5>Electric Vehicle Engineer</h5>
-                <p>Join our engineering team to design and build innovative electric vehicles. Requires a degree in Electrical Engineering or a related field and 3+ years of experience.</p>
-                <center>
-                    <button class="btn btn-primary">Apply Now</button>
-                </center>
-            </li>
-            <li>
-                <h5>Marketing Specialist</h5>
-                <p>We're looking for a creative and driven individual to help shape our marketing strategy. Requires a degree in Marketing or a related field and 2+ years of experience.</p>
-                <center>
-                    <button class="btn btn-primary">Apply Now</button>
-                </center>
-            </li>
-            <li>
-                <h5>Customer Service Representative</h5>
-                <p>Join our customer service team to help customers get the most out of their AfriVolts experience. Requires excellent communication skills and a passion for problem-solving.</p>
-                <center>
-                    <button class="btn btn-primary">Apply Now</button>
-                </center>
-            </li>
-            <li>
-                <h5>Quality Assurance Engineer</h5>
-                <p>Help ensure our electric vehicles meet the highest standards of quality and safety. Requires a degree in Mechanical Engineering or a related field and experience in quality assurance.</p>
-                <center>
-                    <button class="btn btn-primary">Apply Now</button>
-                </center>
-            </li>
-            <li>
-                <h5>Supply Chain Manager</h5>
-                <p>Join our team to manage and optimize our supply chain operations. Requires a degree in Business, Logistics, or a related field and 5+ years of experience in supply chain management.</p>
-                <center>
-                    <button class="btn btn-primary">Apply Now</button>
-                </center>
-            </li>
-            <li>
-                <h5>Human Resources Manager</h5>
-                <p>Play a key role in supporting our team by managing hiring, onboarding, benefits, and more. Requires a degree in Human Resources or a related field and 5+ years of experience in HR.</p>
-                <center>
-                    <button class="btn btn-primary">Apply Now</button>
-                </center>
-            </li>
-            <li>
-                <h5>Sales Manager</h5>
-                <p>Lead our sales team to achieve ambitious targets and provide excellent service to our customers. Requires a degree in Business, Marketing, or a related field and 5+ years of experience in sales, including at least 2 years in a leadership role.</p>
-                <center>
-                    <button class="btn btn-primary">Apply Now</button>
-                </center>
-            </li>
-            
-        </ul>
+    <!-- Main content of your website goes here -->
+    <!-- ...Rest of your HTML code... -->
+
+<main role="main">
+
+    <!-- Jumbotron (Hero section) -->
+    
+    <div class="jumbotron">
+        <center>
+            <div class="container center-content">
+                <h1 class="display-4">Welcome to AfriVolts</h1>
+                <p>We offer the best electric cars in Africa. Sign up and book a test drive today!</p>
+                <?php
+                if (!$userSignedIn) {
+                ?>
+                <p><a class="btn btn-primary btn-lg" href="signUp.html" role="button">Sign Up &raquo;</a></p>
+                <?php
+                } 
+                ?>
+
+                
+            </div>
+        </center>
     </div>
     
+
+    <!-- Car Highlights -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Car Model 1</h2>
+                <img src="Images/smallElectricCar.jpg" id="image1" alt="Car Model 1" class="img-fluid">
+                <br>
+                <br>
+                <!-- <center> -->
+                    <p><a class="btn btn-secondary" href="" role="button">View details &raquo;</a></p>
+                <!-- </center> -->
+            </div>
+            <div class="col-md-4">
+                <h2>Car Model 2</h2>
+                <img src="Images/hyundai-motor-group-a3vDd8hzuYs-unsplash.jpg" id="image2" alt="Car Model 2" class="img-fluid">
+                <br>
+                <br>
+                <!-- <center> -->
+                    <p><a class="btn btn-secondary" href="" role="button">View details &raquo;</a></p>
+                <!-- </center> -->
+            </div>
+            <div class="col-md-4">
+                <h2>Car Model 3</h2>
+                <img src="Images/ElectricMotorbike.jpg" id="image3" alt="Car Model 3" class="img-fluid">
+                <br>
+                <br>
+                <!-- <center> -->
+                    <p><a class="btn btn-secondary" href="" role="button">View details &raquo;</a></p>
+                <!-- </center> -->
+            </div>
+        </div>
+
+        <!-- Blog Excerpts -->
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Images/futureElectric.jpg" id="mg2" class="card-img-top" alt="Blog 1 image">
+                    <div class="card-body">
+                        <h5 class="card-title">The Future of Electric Cars</h5>
+                        <p class="card-text">A sneak peek into the future of electric cars and what it means for our planet.</p>
+                        <p><a class="btn btn-secondary" href="blog1.html" role="button">View Blog &raquo;</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- More blog excerpts can go here... -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Images/futureElectric.jpg" id="mg0" class="card-img-top" alt="Blog 1 image">
+                    <div class="card-body">
+                        <h5 class="card-title">The Future of Electric Cars</h5>
+                        <p class="card-text">A sneak peek into the future of electric cars and what it means for our planet.</p>
+                        <p><a class="btn btn-secondary" href="blog2.html" role="button">View Blog &raquo;</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="Images/switchElectric.jpg" id="mg1" class="card-img-top" alt="Blog 2 image">
+                    <div class="card-body">
+                        <h5 class="card-title">Why Switch to an Electric Vehicle?</h5>
+                        <p class="card-text">Discover the benefits of electric vehicles and why they're a great choice for you.</p>
+                        <p><a class="btn btn-secondary" href="blog3.html" role="button">View Blog &raquo;</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+    </div> <!-- /container -->
+
+</main>
+
+<!-- ...Rest of your HTML code... -->
+
+<div class="container mt-5">
+    <h2 class="text-center mb-3">Customer Testimonials</h2>
+    <div id="carouselTestimonials" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" id="testimonial1">
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">"I absolutely love my new electric car from AfriVolts. The service was exceptional."</p>
+                    <footer class="blockquote-footer">Vince</footer>
+                </blockquote>
+            </div>
+            <div class="carousel-item" id="testimonial2">
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">"AfriVolts made my switch to an electric vehicle seamless. Highly recommend them."</p>
+                    <footer class="blockquote-footer">Markus</footer>
+                </blockquote>
+            </div>
+            <!-- More testimonials go here... -->
+        </div>
+        
+        <a class="carousel-control-prev" href="#carouselTestimonials" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselTestimonials" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<br><br>
+
+<!-- ...Rest of your HTML code... -->
+
+
+<!-- ...Rest of your HTML code... -->
+
+
+    <!-- ...Rest of your HTML code... -->
 
 <footer class="footer mt-auto py-3 bg-light">
     <div class="container">
