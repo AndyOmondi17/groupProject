@@ -3,109 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Sign In</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="Css/styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">AfriVolts</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutUs.html">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="ourCarsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Our Cars
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="ourCarsDropdown">
-                        <a class="dropdown-item" href="carDetails.html">Car Details</a>
-                        <a class="dropdown-item" href="bookTestDrive.html">Book a Test Drive</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Services
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <a class="dropdown-item" href="financing.html">Financing</a>
-                        <a class="dropdown-item" href="serviceCentres.html">Service Centers</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Blog
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="blogDropdown">
-                        <a class="dropdown-item" href="viewBlog.php">View Blog</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="careers.html">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contactUs.html">Contact Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Account
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="accountDropdown">
-                        <a class="dropdown-item" href="signIn.html">Sign In</a>
-                        <a class="dropdown-item" href="signUp.html">Sign Up</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<?php include "nav.php"; ?>
+    <br><br><br><br>
     <div class="container mt-5">
-        <h2 class="text-center">Sign Up</h2>
+        <h2 class="text-center">Sign In</h2>
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <form method="POST" action="processes/signup_process.php">
+            <div class="col-md-8"> <!-- Adjust column number as per your requirement -->
+            <?php if (isset($_GET["error"])) {
+            $error = $_GET["error"];
+            echo "<div class='alert alert-danger' role='alert'>";
+            if ($error === "invalidpassword") {
+                echo "Invalid password!";
+            } else if ($error === "usernotexists") {
+                echo "Username does not exist!";
+            }
+            echo " Please try again.";
+          echo "</div>";
+        } ?>
+                <form method="POST" action="processes/signin_process.php">
+    
                     <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" class="form-control" name="fullName" id="fullName" placeholder="Enter your full name" required>
+                        <label for="loginEmail">Email address</label>
+                        <input type="email" name="email" class="form-control" id="loginEmail" placeholder="Enter email">
                     </div>
                     <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="username" class="form-control" name="username" id="userName" placeholder="Username" required>
+                        <label for="loginPassword">Password</label>
+                        <input type="password" name="password" class="form-control" id="loginPassword" placeholder="Password">
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" required minlength="8">
-                    </div>
-                    <div class="form-group">
-                        <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required minlength="8">
-                    </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="terms" required>
-                        <label class="form-check-label" for="terms">I agree to the Terms and Conditions</label>
-                    </div>
+                    <input type="hidden" name="signin" value="1"> <!-- Add this line -->
                     <center>
-                        <button type="submit"  class="btn btn-primary">Submit</button>
+                        <button type="submit" name="signin" class="btn btn-primary">Submit</button>
                     </center>
                 </form>
-                <div class="mt-3">
-                    <center><p>Already have an account? <a href="signIn.html">Sign In</a></p></center>
-                    
-                </div>
             </div>
         </div>
     </div>
-    
+
+    <br><br><br><br><br><br>
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container">
             <div class="row">
@@ -232,6 +171,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+        
+    
 </body>
 </html>

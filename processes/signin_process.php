@@ -21,14 +21,16 @@ if(isset($_POST["signin"])){
                 $_SESSION["fullname"] = $row["fullname"];
                 $_SESSION["email"] = $row["email"];
                 // Redirect the user to the home page or dashboard
-                header("Location: ../index.html");
+                header("Location: ../index.php");
                 exit();
             } else {
-                die("Error: Invalid password");
+                header("Location: ../signIn.php?error=invalidpassword");
+                exit();
             }
         }
     } else {
-        die("Error: User does not exist");
+        header("Location: ../signIn.php?error=usernotexists");
+        exit();
     }
 }
 ?>

@@ -9,64 +9,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">AfriVolts</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutUs.html">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="ourCarsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Our Cars
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="ourCarsDropdown">
-                        <a class="dropdown-item" href="carDetails.html">Car Details</a>
-                        <a class="dropdown-item" href="bookTestDrive.html">Book a Test Drive</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Services
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <a class="dropdown-item" href="financing.html">Financing</a>
-                        <a class="dropdown-item" href="serviceCentres.html">Service Centers</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Blog
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="blogDropdown">
-                        <a class="dropdown-item" href="viewBlog.php">View Blog</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="careers.html">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contactUs.html">Contact Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Account
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="accountDropdown">
-                        <a class="dropdown-item" href="signIn.html">Sign In</a>
-                        <a class="dropdown-item" href="signUp.html">Sign Up</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+<?php include "nav.php"; ?>
     <div class="container mt-5">
         <div class="text-center mb-4">
             <h2>Financing at AfriVolts</h2>

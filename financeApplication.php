@@ -3,175 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cars</title>
+    <title>Financing</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="Css/styles.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">AfriVolts</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutUs.html">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="ourCarsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Our Cars
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="ourCarsDropdown">
-                        <a class="dropdown-item" href="carDetails.html">Car Details</a>
-                        <a class="dropdown-item" href="bookTestDrive.html">Book a Test Drive</a>
+<?php include "nav.php"; ?>
+    <div class="container">
+        <h2 class="text-center mt-5">Financing Application</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6"> 
+                <form>
+                    <div class="form-group">
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="First Name Last Name" required>
                     </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Services
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <a class="dropdown-item" href="financing.html">Financing</a>
-                        <a class="dropdown-item" href="serviceCentres.html">Service Centers</a>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
                     </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Blog
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="blogDropdown">
-                        <a class="dropdown-item" href="viewBlog.php">View Blog</a>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="careers.html">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contactUs.html">Contact Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Account
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="accountDropdown">
-                        <a class="dropdown-item" href="signIn.html">Sign In</a>
-                        <a class="dropdown-item" href="signUp.html">Sign Up</a>
+                    <div class="form-group">
+                        <label for="model">Vehicle Model:</label>
+                        <select class="form-control" id="model" name="model" required>
+                            <option value="">--Please choose an option--</option>
+                            <option value="Model1">Model 1</option>
+                            <option value="Model2">Model 2</option>
+                            <option value="Model3">Model 3</option>
+                        </select>
                     </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container mt-5">
-        <h2 class="text-center">Car Details</h2>
-        
-        <!-- Car Details -->
-        <div class="card mb-3">
-            <div class="row no-gutters">
-                <div class="col-md-6">
-                    <img src="Images/hyundai-motor-group-a3vDd8hzuYs-unsplash.jpg" class="card-img" alt="Car Image">
-                </div>
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <h5 class="card-title">Falcon X</h5>
-                        <p class="card-text">Vehicle Type: Electric Sedan
-                            Range: 450 miles (724 km)
-                            Battery: 100 kWh Lithium-ion
-                            Performance: 0-60 mph in 2.8 seconds
-                            Top Speed: 155 mph (250 km/h)
-                            Seating: 5 adults
-                            Cargo Capacity: 28 cu ft
-                            Weight: 4,941 lbs (2,241 kg)
-                            Drive: All-Wheel Drive
-                            Wheel Size: 20" or 22"</p>
-                        <p class="card-text">Price: Ksh 1000,000</p>
+                    <div class="form-group">
+                        <label for="income">Annual Income:</label>
+                        <input type="number" class="form-control" id="income" name="income" required>
                     </div>
-                </div>
+                    <center>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Submit Application</button>
+                        </div>
+                    </center>
+                </form>
             </div>
         </div>
-
-        <!-- Comparison -->
-        <h4>Comparison</h4>
-        <table class="table">
-            <thead>
-              <tr>
-                <th>Specification / Feature</th>
-                <th>AfriVolts Falcon X</th>
-                <th>AfriVolts Eagle Z</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Vehicle Type</td>
-                <td>Electric Sedan</td>
-                <td>Electric SUV</td>
-              </tr>
-              <tr>
-                <td>Range</td>
-                <td>450 miles (724 km)</td>
-                <td>350 miles (563 km)</td>
-              </tr>
-              <tr>
-                <td>Battery</td>
-                <td>100 kWh Lithium-ion</td>
-                <td>85 kWh Lithium-ion</td>
-              </tr>
-              <tr>
-                <td>Performance (0-60 mph)</td>
-                <td>2.8 seconds</td>
-                <td>4.2 seconds</td>
-              </tr>
-              <tr>
-                <td>Top Speed</td>
-                <td>155 mph (250 km/h)</td>
-                <td>135 mph (217 km/h)</td>
-              </tr>
-              <tr>
-                <td>Seating</td>
-                <td>5 adults</td>
-                <td>7 adults</td>
-              </tr>
-              <tr>
-                <td>Cargo Capacity</td>
-                <td>28 cu ft</td>
-                <td>88 cu ft</td>
-              </tr>
-              <tr>
-                <td>Weight</td>
-                <td>4,941 lbs (2,241 kg)</td>
-                <td>5,421 lbs (2,459 kg)</td>
-              </tr>
-              <tr>
-                <td>Drive</td>
-                <td>All-Wheel Drive</td>
-                <td>All-Wheel Drive</td>
-              </tr>
-              <tr>
-                <td>Wheel Size</td>
-                <td>20" or 22"</td>
-                <td>20" or 22"</td>
-              </tr>
-            </tbody>
-          </table>
-          <h2>Feature Comparison:</h2>
-<p>Both the Falcon X and Eagle Z share most of their features including AutoPilot, over-the-air updates, All-Wheel Drive, luxurious interiors, high-strength architecture for safety, regenerative braking, and the fact they are zero emissions vehicles.</p>
-<p>The key difference in features comes with the space and functionality. The Eagle Z, being an SUV, offers significantly more cargo capacity and can seat two more adults than the Falcon X. It's designed for families who need more space for both passengers and cargo. However, it does have a slightly lower range and slower acceleration due to its increased size and weight.</p>
-<p>The Falcon X, on the other hand, is more performance oriented. It has superior acceleration and top speed, while still offering ample space for 5 adults. It's designed for those who desire performance without compromising on comfort and safety.</p>
-<p>Please note: Always verify the actual specifications and features with the vehicle manufacturer, as the above is purely fictitious and for illustrative purposes only.</p>
-
-          
-
-        <!-- Availability -->
-        <h4>Availability</h4>
-        <p>This vehicle is currently in stock.</p>
-        
-        <a href="contactUs.html" class="btn btn-primary">Contact Us for More Info</a>
     </div>
+    <br><br><br><br>
 
 <footer class="footer mt-auto py-3 bg-light">
     <div class="container">

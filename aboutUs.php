@@ -3,118 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financing</title>
+    <title>About Us</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="Css/styles.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">AfriVolts</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutUs.html">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="ourCarsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Our Cars
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="ourCarsDropdown">
-                        <a class="dropdown-item" href="carDetails.html">Car Details</a>
-                        <a class="dropdown-item" href="bookTestDrive.html">Book a Test Drive</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Services
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <a class="dropdown-item" href="financing.html">Financing</a>
-                        <a class="dropdown-item" href="serviceCentres.html">Service Centers</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Blog
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="blogDropdown">
-                        <a class="dropdown-item" href="viewBlog.php">View Blog</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="careers.html">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contactUs.html">Contact Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Account
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="accountDropdown">
-                        <a class="dropdown-item" href="signIn.html">Sign In</a>
-                        <a class="dropdown-item" href="signUp.html">Sign Up</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<?php include "nav.php"; ?>
 
     <div class="container">
-        <h2 class="text-center mt-5">Service Booking</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-6"> 
-                <form>
-                    <div class="form-group">
-                        <label for="fullname">Full Name:</label>
-                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="First Name Last Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number:</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="model">Vehicle Model:</label>
-                        <select class="form-control" id="model" name="model" required>
-                            <option value="">--Please choose an option--</option>
-                            <option value="Model1">Model 1</option>
-                            <option value="Model2">Model 2</option>
-                            <option value="Model3">Model 3</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="servicedate">Preferred Service Date:</label>
-                        <input type="date" class="form-control" id="servicedate" name="servicedate" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="servicetime">Preferred Service Time:</label>
-                        <input type="time" class="form-control" id="servicetime" name="servicetime" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Description of Issue:</label>
-                        <textarea class="form-control" id="description" name="description" rows="3"></textarea>
-                    </div>
-                    <center>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Book Service</button>
-                        </div>
-                    </center>
-                </form>
+        <div class="row">
+            <div class="col-lg-12 text-center my-4">
+                <h2>Join Our Team</h2>
+                <p>At AfriVolts, we're working towards a greener, more sustainable future with our innovative electric vehicles. As pioneers in the electric vehicle market in Africa, we're always on the lookout for passionate, talented individuals who are excited about making a difference in the world.</p>
+            </div>
+            <div class="col-lg-6">
+                <h4>Why AfriVolts?</h4>
+                <p>We're a company driven by our mission to transform transportation and shape the future of mobility. When you join our team, you'll be part of a fast-paced, dynamic environment where innovation is not just welcomed, but encouraged.</p>
+                <p>We believe that our people are our greatest asset, and we're committed to supporting the growth and development of every team member. At AfriVolts, you'll have the opportunity to work alongside some of the brightest minds in the industry, and your contributions will have a tangible impact on our company and the world.</p>
+            </div>
+            <div class="col-lg-6">
+                <h4>Benefits & Perks</h4>
+                <p>We offer a competitive benefits package to support the health and well-being of our employees. This includes comprehensive health insurance, generous paid time off, and a retirement savings plan. We also offer a range of perks to make life a little more enjoyable, including:</p>
+                <ul>
+                    <li>Flexible working hours</li>
+                    <li>Remote work opportunities</li>
+                    <li>Professional development and continued learning support</li>
+                    <li>An inclusive, diverse work environment</li>
+                </ul>
+            </div>
+            <div class="col-lg-12 text-center my-4">
+                <h4>Ready to Drive the Future?</h4>
+                <p>Check out our current openings and apply today. We can't wait to hear from you!</p>
+                <a href="careers.html" class="btn btn-primary">View Open Positions</a>
             </div>
         </div>
     </div>
-    <br><br><br><br>
+    
+        
+
 
 <footer class="footer mt-auto py-3 bg-light">
     <div class="container">
@@ -145,6 +72,7 @@
         </div>
     </div>
 </footer>
+
 <!-- Modal -->
 <div class="modal fade" id="termsAndConditionsModal" tabindex="-1" role="dialog" aria-labelledby="termsAndConditionsModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
