@@ -28,9 +28,21 @@
                 <?php
                 if (!$userSignedIn) {
                 ?>
-                <p><a class="btn btn-primary btn-lg" href="signUp.html" role="button">Sign Up &raquo;</a></p>
+                <p><a class="btn btn-primary btn-lg" href="signUp.php" role="button">Sign Up &raquo;</a></p>
                 <?php
-                } 
+                } else {
+                    $greeting = "";
+                    $currentHour = date('H:i:s');
+                    if ($currentHour > "06:00:00" && $currentHour < "12:00:00") {
+                        $greeting .= "Good morning";
+                    } else if ($currentHour > "12:00:00" && $currentHour < "16:00:00") {
+                        $greeting .= "Good afternoon";
+                    } else if ($currentHour > "16:00:00" && $currentHour < "21:00:00") {
+                        $greeting .= "Good evening";
+                    }
+                    $greeting .= " " . $_SESSION['username'];
+                    echo "<p>".$greeting."</p>";
+                }
                 ?>
 
                 
